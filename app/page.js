@@ -59,9 +59,9 @@ export default function Home() {
       >
 
         <div className="flex justify-between min-w-1/2 drop-shadow-[0rem_0rem_0.4rem_#ffffff70]">
-          <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl hover:invert" />
-          <FontAwesomeIcon icon={faEnvelope} className="text-white text-4xl hover:invert mx-6" />
-          <FontAwesomeIcon icon={faSquarePhone} className="text-white text-4xl hover:invert" />
+          <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl hover:invert cursor-pointer" />
+          <FontAwesomeIcon icon={faEnvelope} className="text-white text-4xl hover:invert cursor-pointer mx-6" />
+          <FontAwesomeIcon icon={faSquarePhone} className="text-white text-4xl hover:invert cursor-pointer" />
         </div>
 
         <Image
