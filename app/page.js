@@ -35,7 +35,6 @@ export default function Home() {
           }}
           transition={{
             duration: 1,
-            delay: 0.5
           }}
         >
           a realtor based in Truro, NS.
