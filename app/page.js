@@ -6,11 +6,10 @@ import { motion } from "framer-motion"
 export default function Home() {
   return (
     <div className="relative h-screen bg-cover bg-center bg-[url('/images/Interior-mobile.jpg')] sm:bg-[url('/images/Banglow-day.jpg')]">
-      {/* <div className="absolute inset-0 bg-black opacity-10"></div> */}
 
-      {/* (1) Add a background picture that is darker than the foreground and that covers the entire screen, be it Desktop, laptop, tablet or mobile screen */}
+      {/* (1) Add a background picture that is darker than the foreground and that covers the entire screen, be it Desktop, laptop, tablet or mobile screen. DONE */}
 
-      {/* (2) Add an "Hey there, I'm Preet Singh Dhillon, a realtor based out of Truro, Ns."  Done */}
+      {/* (2) Add an "Hey there, I'm Preet Singh Dhillon, a realtor based out of Truro, Ns."  DONE */}
 
       {/* (3) Add Bhaiye's picture right beside the text for desktop screens. */}
 
@@ -66,6 +65,7 @@ export default function Home() {
 
         </motion.button>
       </div>
+      <div className="absolute inset-0 mt-auto h-1/4 bg-gradient-to-b from-transparent to-black"></div>
     </div>
   );
 }
