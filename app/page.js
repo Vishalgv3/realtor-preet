@@ -7,24 +7,24 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faSquarePhone } from "@fortawesome/free-solid-svg-icons";
 
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({ weight: '400', subsets: ['latin'] });
+
 export default function Home() {
   return (
-    <div className="relative h-screen bg-cover bg-center bg-[url('/images/Interior-mobile.jpg')] sm:bg-[url('/images/Banglow-day.jpg')] overflow-hidden">
-
-      {/* (1) Add a background picture that is darker than the foreground and that covers the entire screen, be it Desktop, laptop, tablet or mobile screen. DONE */}
-
-      {/* (2) Add an "Hey there, I'm Preet Singh Dhillon, a realtor based out of Truro, Ns."  DONE */}
+    <div className="relative h-screen bg-cover bg-center bg-[url('/images/Interior-mobile.jpg')] sm:bg-[url('/images/Banglow-day.jpg')] overflow-hidden select-none">
 
       {/* (3) Add Bhaiye's picture right beside the text for desktop screens. */}
 
       {/* (4) Add a block at the bottom of the page that is blackish but not entirely black, and which has bhaiye's social links. */}
 
       <div className="p-6 relative z-10 drop-shadow-[0rem_0rem_0.4rem_#000]">
-        <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white leading-snug md:mt-0">
+        <h1 className="text-xl sm:text-2xl md:text-4xl text-white leading-snug md:mt-0">
           Hi, I&apos;m
-          <span className="block max-w-fit bg-white rounded px-2 mt-1 italic text-black">Preet Singh Dhillon</span>
+          <span className={`${montserrat.className} block max-w-fit bg-white rounded px-2 mt-1 text-black`}>Preet Singh Dhillon</span>
         </h1>
-        <motion.p className="text font-extrabold text-white mt-4"
+        <motion.p className="text font-bold text-white mt-4"
           initial={{
             opacity: 0,
             y: 25,
