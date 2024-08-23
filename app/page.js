@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
@@ -61,6 +63,10 @@ export default function Home() {
           height={37}
           priority
         />
+
+        <div>
+          <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl" />
+        </div>
 
       </motion.div>
 
