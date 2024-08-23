@@ -37,35 +37,33 @@ export default function Home() {
           a realtor based in Truro, NS.
           <span className="ml-2 inline sm:block sm:ml-0"> ** Add a call to action here ** </span>
         </motion.p>
-        <motion.button className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-4 md:mt-16`}
-          initial={{
-            opacity: 0,
-            y: 25,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-            delay: 1
-          }}
-        >
-          {/* replace this image with "Royal Lepage logo" */}
-          {/* <Image
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          /> */}
-
-          <span className="mt-8">** Replace this button with &quot;Royal LePage&quot; logo **</span>
-
-        </motion.button>
       </div>
-      <div className="absolute inset-0 mt-auto h-1/4 bg-gradient-to-b from-transparent to-black"></div>
+
+      <motion.div className="absolute inset-0 mt-auto h-1/4 bg-gradient-to-b from-transparent to-black flex items-center justify-between p-4"
+        initial={{
+          opacity: 0,
+          y: 25,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 1,
+          delay: 1
+        }}
+      >
+        <Image
+          className=""
+          src="/svg/Royal_LePage_Logo.svg"
+          alt="Royal LePage Logo"
+          width={180}
+          height={37}
+          priority
+        />
+
+      </motion.div>
+
     </div>
   );
 }
