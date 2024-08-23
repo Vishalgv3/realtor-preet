@@ -4,10 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faSquarePhone } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
-    <div className="relative h-screen bg-cover bg-center bg-[url('/images/Interior-mobile.jpg')] sm:bg-[url('/images/Banglow-day.jpg')]">
+    <div className="relative h-screen bg-cover bg-center bg-[url('/images/Interior-mobile.jpg')] sm:bg-[url('/images/Banglow-day.jpg')] overflow-hidden">
 
       {/* (1) Add a background picture that is darker than the foreground and that covers the entire screen, be it Desktop, laptop, tablet or mobile screen. DONE */}
 
@@ -41,7 +43,7 @@ export default function Home() {
         </motion.p>
       </div>
 
-      <motion.div className="absolute inset-0 mt-auto h-1/4 bg-gradient-to-b from-transparent to-black flex items-center justify-between p-4"
+      <motion.div className="absolute inset-0 mt-auto h-1/4 bg-gradient-to-b from-transparent to-black flex flex-wrap items-center justify-between p-6"
         initial={{
           opacity: 0,
           y: 25,
@@ -55,18 +57,21 @@ export default function Home() {
           delay: 1
         }}
       >
+
+        <div className="flex justify-between min-w-1/2 drop-shadow-[0rem_0rem_0.4rem_#ffffff70]">
+          <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl hover:invert" />
+          <FontAwesomeIcon icon={faEnvelope} className="text-white text-4xl hover:invert mx-6" />
+          <FontAwesomeIcon icon={faSquarePhone} className="text-white text-4xl hover:invert" />
+        </div>
+
         <Image
-          className=""
+          className="drop-shadow-[0rem_0rem_0.4rem_#ffffff70]"
           src="/svg/Royal_LePage_Logo.svg"
           alt="Royal LePage Logo"
           width={180}
           height={37}
           priority
         />
-
-        <div>
-          <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl" />
-        </div>
 
       </motion.div>
 
