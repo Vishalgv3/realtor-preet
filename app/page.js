@@ -2,15 +2,18 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faSquarePhone } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
-    <div className="relative h-screen bg-cover bg-center bg-[url('/images/Interior-mobile.jpg')] sm:bg-[url('/images/Banglow-day.jpg')]">
-      {/* <div className="absolute inset-0 bg-black opacity-10"></div> */}
+    <div className="relative h-screen bg-cover bg-center bg-[url('/images/Interior-mobile.jpg')] sm:bg-[url('/images/Banglow-day.jpg')] overflow-hidden">
 
-      {/* (1) Add a background picture that is darker than the foreground and that covers the entire screen, be it Desktop, laptop, tablet or mobile screen */}
+      {/* (1) Add a background picture that is darker than the foreground and that covers the entire screen, be it Desktop, laptop, tablet or mobile screen. DONE */}
 
-      {/* (2) Add an "Hey there, I'm Preet Singh Dhillon, a realtor based out of Truro, Ns."  Done */}
+      {/* (2) Add an "Hey there, I'm Preet Singh Dhillon, a realtor based out of Truro, Ns."  DONE */}
 
       {/* (3) Add Bhaiye's picture right beside the text for desktop screens. */}
 
@@ -38,34 +41,40 @@ export default function Home() {
           a realtor based in Truro, NS.
           <span className="ml-2 inline sm:block sm:ml-0"> ** Add a call to action here ** </span>
         </motion.p>
-        <motion.button className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-4 md:mt-16`}
-          initial={{
-            opacity: 0,
-            y: 25,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-            delay: 1
-          }}
-        >
-          {/* replace this image with "Royal Lepage logo" */}
-          {/* <Image
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          /> */}
-
-          <span className="mt-8">** Replace this button with &quot;Royal LePage&quot; logo **</span>
-
-        </motion.button>
       </div>
+
+      <motion.div className="absolute inset-0 mt-auto h-1/4 bg-gradient-to-b from-transparent to-black flex flex-wrap items-center justify-between p-6"
+        initial={{
+          opacity: 0,
+          y: 25,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 1,
+          delay: 1
+        }}
+      >
+
+        <div className="flex justify-between min-w-1/2 drop-shadow-[0rem_0rem_0.4rem_#ffffff70]">
+          <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl hover:invert" />
+          <FontAwesomeIcon icon={faEnvelope} className="text-white text-4xl hover:invert mx-6" />
+          <FontAwesomeIcon icon={faSquarePhone} className="text-white text-4xl hover:invert" />
+        </div>
+
+        <Image
+          className="drop-shadow-[0rem_0rem_0.4rem_#ffffff70]"
+          src="/svg/Royal_LePage_Logo.svg"
+          alt="Royal LePage Logo"
+          width={180}
+          height={37}
+          priority
+        />
+
+      </motion.div>
+
     </div>
   );
 }
