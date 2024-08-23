@@ -15,10 +15,12 @@ export default function Home() {
 
       {/* (4) Add a block at the bottom of the page that is blackish but not entirely black, and which has bhaiye's social links. */}
 
-      <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white leading-snug mt-8 md:mt-0">
-        Hello traveller, I&apos;m
-        <span className="block max-w-fit bg-white rounded px-2 mt-1 italic text-black">Vishal Chaudhari</span>
-        <motion.p className="text-lg text-white-600 mt-4"
+      <div className="p-6">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white leading-snug md:mt-0">
+          Hi, I&apos;m
+          <span className="block max-w-fit bg-white rounded px-2 mt-1 italic text-black">Preet Singh Dhillon</span>
+        </h1>
+        <motion.p className="text-lg font-extrabold text-white mt-4"
           initial={{
             opacity: 0,
             y: 25,
@@ -32,8 +34,8 @@ export default function Home() {
             delay: 0.5
           }}
         >
-          I am a full-stack developer with a passion
-          <span className="ml-2 inline sm:block sm:ml-0">for creating beautiful and feature rich websites.</span>
+          a realtor based in Truro, NS.
+          <span className="ml-2 inline sm:block sm:ml-0"> ** Add a call to action here ** </span>
         </motion.p>
         <motion.button className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-4 md:mt-16`}
           initial={{
@@ -48,20 +50,21 @@ export default function Home() {
             duration: 1,
             delay: 1
           }}
-        >Contact Me
-
-          <Image
+        >
+          {/* replace this image with "Royal Lepage logo" */}
+          {/* <Image
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
             src="/next.svg"
             alt="Next.js Logo"
             width={180}
             height={37}
             priority
-          />
+          /> */}
+
+          <span className="mt-8 dark:drop-shadow-[0_0_0.3rem_#ffffff70]">** Replace this button with &quot;Royal Lepage&quot; logo **</span>
 
         </motion.button>
-      </h1>
-
+      </div>
     </div>
   );
 }
