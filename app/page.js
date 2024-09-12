@@ -82,10 +82,10 @@ export default function Home() {
           </div>
 
           <Image
-            className="drop-shadow-[0rem_0rem_0.4rem_#ffffff70] rounded m-auto mt-14"
-            src="/images/placeholder.jpg"
-            alt="placeholder"
-            width={250}
+            className="drop-shadow-[0rem_0rem_0.4rem_#ffffff70] rounded m-auto mt-10"
+            src="/images/realtor_preet_portrait.jpg"
+            alt="Preet singh dhillon's portrait photo"
+            width={200}
             height={10}
             priority
             onLoad={(e) => setShowLoadingOverlay(false)}
