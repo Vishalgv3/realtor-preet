@@ -3,5 +3,5 @@ export const socialLinks = {
 
     mobile: `<div class="mb-3">Call me at <a href="tel:+19028090539" class="text-[#ea002a] hover:text-[#f5778f] outline-none">902-809-0539</a>.</div>`,
 
-    email: `<div class="mb-3">Email me at <a href="" target="_blank" class="text-[#ea002a] hover:text-[#f5778f] outline-none">example@example.com</a>.</div>`,
+    email: `<div class="mb-3">Email me at <a href="mailto:preetpal@royallepage.ca" target="_blank" class="text-[#ea002a] hover:text-[#f5778f] outline-none"> preetpal@royallepage.ca</a>.</div>`,
 }
