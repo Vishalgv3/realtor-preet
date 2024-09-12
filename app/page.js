@@ -8,16 +8,44 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faSquarePhone } from "@fortawesome/free-solid-svg-icons";
 
 import { Montserrat } from "next/font/google";
+import { useState } from "react";
+import { DialogBox } from "./components/DialogBox";
 
+// ---------------- font
 const montserrat = Montserrat({ weight: '400', subsets: ['latin'] });
 
+// ---------------- component
 export default function Home() {
+
+  // ---------------- state variables
+  const [linkClicked, setLinkClicked] = useState(false);
+  const [link, setLink] = useState("");
+
+  // ---------------- event handlers
+  const handleInstalgramClick = (e) => {
+    setLinkClicked(true);
+    setLink("Instagram");
+  }
+
+  const handleEmailClick = (e) => {
+    setLinkClicked(true);
+    setLink("Email");
+  }
+
+  const handleContactNumberClick = (e) => {
+    setLinkClicked(true);
+    setLink("Contact Number");
+  }
+
+  // ---------------- JSX
   return (
     <div className="relative h-screen bg-cover bg-center bg-[url('/images/Interior-mobile.jpg')] sm:bg-[url('/images/Banglow-day.jpg')] overflow-hidden select-none">
 
       {/* (3) Add Bhaiye's picture right beside the text for desktop screens. */}
 
       {/* (4) Add a block at the bottom of the page that is blackish but not entirely black, and which has bhaiye's social links. */}
+
+      <DialogBox linkClicked={linkClicked} setLinkClicked={setLinkClicked} link={link} />
 
       <div className="p-6 relative z-10 drop-shadow-[0rem_0rem_0.4rem_#000]">
         <h1 className="text-xl sm:text-2xl md:text-4xl text-white leading-snug md:mt-0">
@@ -58,9 +86,9 @@ export default function Home() {
       >
 
         <div className="flex justify-between min-w-1/2 drop-shadow-[0rem_0rem_0.4rem_#ffffff70]">
-          <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl hover:invert cursor-pointer" />
-          <FontAwesomeIcon icon={faEnvelope} className="text-white text-4xl hover:invert cursor-pointer mx-6" />
-          <FontAwesomeIcon icon={faSquarePhone} className="text-white text-4xl hover:invert cursor-pointer" />
+          <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl hover:invert cursor-pointer" onClick={handleInstalgramClick} />
+          <FontAwesomeIcon icon={faEnvelope} className="text-white text-4xl hover:invert cursor-pointer mx-6" onClick={handleEmailClick} />
+          <FontAwesomeIcon icon={faSquarePhone} className="text-white text-4xl hover:invert cursor-pointer" onClick={handleContactNumberClick} />
         </div>
 
         <Image
