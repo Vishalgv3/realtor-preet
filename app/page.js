@@ -47,27 +47,39 @@ export default function Home() {
 
       <DialogBox linkClicked={linkClicked} setLinkClicked={setLinkClicked} link={link} />
 
-      <div className="p-6 relative z-10 drop-shadow-[0rem_0rem_0.4rem_#000]">
-        <h1 className="text-xl sm:text-2xl md:text-4xl text-white leading-snug md:mt-0">
-          Hi, I&apos;m
-          <span className={`${montserrat.className} block max-w-fit bg-white rounded px-2 mt-1 text-black`}>Preet Singh Dhillon</span>
-        </h1>
-        <motion.p className="text font-bold text-white mt-4"
-          initial={{
-            opacity: 0,
-            y: 25,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-        >
-          a realtor based in Truro, NS.
-          <span className="ml-2 inline max-w-96 sm:block sm:ml-0">Your dream home is just a click away. Let&apos;s Find Your Perfect Home Together!</span>
-        </motion.p>
+      <div className=" p-6 relative z-10 drop-shadow-[0rem_0rem_0.4rem_#000]">
+        <div>
+          <h1 className="text-xl sm:text-2xl md:text-4xl text-white leading-snug md:mt-0">
+            Hi, I&apos;m
+            <span className={`${montserrat.className} block max-w-fit bg-white rounded px-2 mt-1 text-black`}>Preet Singh Dhillon</span>
+          </h1>
+          <motion.p className="text font-bold text-white mt-4"
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+            }}
+          >
+            a realtor based in Truro, NS.
+            <span className="ml-2 inline max-w-96 sm:block sm:ml-0">Your dream home is just a click away. Let&apos;s Find Your Perfect Home Together!</span>
+          </motion.p>
+        </div>
+
+        <Image
+          className="drop-shadow-[0rem_0rem_0.4rem_#ffffff70] rounded m-auto mt-14"
+          src="/images/placeholder.jpg"
+          alt="placeholder"
+          width={250}
+          height={10}
+          priority
+          onLoad={(e) => console.log("Image Loaded!!!")}
+        />
       </div>
 
       <motion.div className="absolute inset-0 mt-auto h-1/4 bg-gradient-to-b from-transparent to-black flex flex-wrap items-center justify-between p-6"
