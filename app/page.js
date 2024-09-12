@@ -66,7 +66,7 @@ export default function Home() {
           }}
         >
           a realtor based in Truro, NS.
-          <span className="ml-2 inline sm:block sm:ml-0"> ** Add a call to action here ** </span>
+          <span className="ml-2 inline max-w-96 sm:block sm:ml-0">Your dream home is just a click away. Let&apos;s Find Your Perfect Home Together!</span>
         </motion.p>
       </div>
 
