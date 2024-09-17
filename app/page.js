@@ -61,7 +61,7 @@ export default function Home() {
           <div>
             <h1 className="text-xl sm:text-2xl md:text-4xl text-white leading-snug md:mt-0">
               Hi, I&apos;m
-              <span className={`${montserrat.className} block max-w-fit bg-white rounded px-2 mt-1 text-black`}>Preet Singh Dhillon</span>
+              <span className={`${montserrat.className} block max-w-fit bg-white rounded px-2 mt-1 text-black`}>Preet Pal Singh</span>
             </h1>
             <motion.p className="text font-bold text-white mt-4"
               initial={{
